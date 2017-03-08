@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+
+<body class="">
+    <div class="clearfix page-nav">
+    <% if(user) { %>
+        <div class="pull-left nav-username">Hello! <a href="/"><%= user.username %></a></div>
+        <div class="pull-left"><a href="/post">发表</a></div>
+        <div class="pull-right nav-quit"><a href="/quit">退出</a></div>
+    <% } else { %>
+        <% if(page == 'login') { %>
+            <div class="pull-right nav-register"><a href="/register">注册</a></div>
+        <% } else { %>
+            <div class="pull-right nav-login"><a href="/login">登录</a></div>
+        <% } %>
+    <% } %>
+
+    </div>
+    <div class="text-center page-title">
+        <%= title %>
+    </div>

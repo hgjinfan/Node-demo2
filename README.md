@@ -15,3 +15,9 @@
 	//需开启数据库
 	mongod --dbpath C:\MongoDBdata
     npm start
+## 功能 ##
+登录注册退出
+
+提交文章（删除、修改后期会陆续添加）
+
+首页展示文章列表
